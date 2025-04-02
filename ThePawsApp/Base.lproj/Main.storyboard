@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Paws-->
         <scene sceneID="dDA-Pz-DTp">
             <objects>
                 <navigationController id="V18-jh-egm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xhg-Pm-7EC"/>
+                    <tabBarItem key="tabBarItem" title="Paws" image="pawprint.fill" catalog="system" id="xhg-Pm-7EC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BoA-Kl-d6G">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -70,11 +70,11 @@
             </objects>
             <point key="canvasLocation" x="576" y="743"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="SuB-rP-UL6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QJN-cd-uld" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="HdH-yS-bh4"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="dog.fill" catalog="system" id="HdH-yS-bh4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xGy-61-r2g">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -109,6 +109,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dog.fill" catalog="system" width="128" height="100"/>
+        <image name="pawprint.fill" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
