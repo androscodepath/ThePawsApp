@@ -49,10 +49,67 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Bsf-NQ-PKK"/>
+                    <connections>
+                        <segue destination="vEj-Wc-NdV" kind="show" identifier="showDog" id="247-Jw-Ilw"/>
+                        <segue destination="MVf-9U-V9O" kind="show" identifier="showOwner" id="3SS-RS-1o6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FrQ-p7-aeJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="576.33587786259545" y="55.633802816901408"/>
+        </scene>
+        <!--Paws Detail View Controller-->
+        <scene sceneID="Pb4-D0-Y9X">
+            <objects>
+                <viewController id="vEj-Wc-NdV" customClass="PawsDetailViewController" customModule="ThePawsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FXR-Lx-D6j">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rPr-Ue-EY8">
+                                <rect key="frame" x="0.0" y="103" width="393" height="221"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rPr-Ue-EY8" secondAttribute="height" multiplier="16:9" id="j52-A3-lq4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="me6-Tn-2il">
+                                <rect key="frame" x="16" y="291" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B43-Ff-m3A">
+                                <rect key="frame" x="171.33333333333334" y="734" width="50.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapLike:" destination="vEj-Wc-NdV" eventType="touchUpInside" id="tlX-Bj-yKb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S3Z-JZ-upy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B43-Ff-m3A" firstAttribute="bottom" secondItem="S3Z-JZ-upy" secondAttribute="bottom" id="8E6-Rs-AHo"/>
+                            <constraint firstItem="rPr-Ue-EY8" firstAttribute="top" secondItem="S3Z-JZ-upy" secondAttribute="top" id="JUN-k7-dmT"/>
+                            <constraint firstItem="me6-Tn-2il" firstAttribute="leading" secondItem="S3Z-JZ-upy" secondAttribute="leading" constant="16" id="Zir-IW-vz3"/>
+                            <constraint firstItem="rPr-Ue-EY8" firstAttribute="centerX" secondItem="FXR-Lx-D6j" secondAttribute="centerX" id="qh7-NN-ERT"/>
+                            <constraint firstItem="rPr-Ue-EY8" firstAttribute="leading" secondItem="S3Z-JZ-upy" secondAttribute="leading" id="syH-ra-Wpx"/>
+                            <constraint firstItem="S3Z-JZ-upy" firstAttribute="trailing" secondItem="rPr-Ue-EY8" secondAttribute="trailing" id="tvK-n7-l6m"/>
+                            <constraint firstItem="B43-Ff-m3A" firstAttribute="centerX" secondItem="FXR-Lx-D6j" secondAttribute="centerX" id="x57-DJ-Er2"/>
+                            <constraint firstItem="me6-Tn-2il" firstAttribute="top" secondItem="rPr-Ue-EY8" secondAttribute="bottom" constant="-33" id="yjg-6s-bjq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ry6-U2-N9Q"/>
+                    <connections>
+                        <outlet property="breedImageView" destination="rPr-Ue-EY8" id="LIg-rL-nDl"/>
+                        <outlet property="likeButton" destination="B43-Ff-m3A" id="35d-k1-bfZ"/>
+                        <outlet property="nameLabel" destination="me6-Tn-2il" id="cj4-Yb-PW1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JCL-y4-4zF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="52"/>
         </scene>
         <!--Paws User Profile View Controller-->
         <scene sceneID="yXq-60-6hX">
@@ -136,6 +193,22 @@
             </objects>
             <point key="canvasLocation" x="574.80916030534354" y="742.95774647887333"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="1hW-TU-raW">
+            <objects>
+                <viewController id="MVf-9U-V9O" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dnM-U1-LEe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uMC-HI-bwJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QIO-nI-TRE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rls-0o-DcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1854" y="765"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="SuB-rP-UL6">
             <objects>
@@ -161,6 +234,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="A5n-kv-dnT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fDv-2W-x84">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -178,6 +252,7 @@
         <image name="Ginger" width="1600" height="1200"/>
         <image name="IMG_0778" width="1477" height="1477"/>
         <image name="dog.fill" catalog="system" width="128" height="100"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
         <image name="pawprint.fill" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
